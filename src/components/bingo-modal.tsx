@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "rgba(0, 0, 0, 0.83)",
+    backgroundColor: "rgba(0, 0, 0, 0.75)",
   },
   container: {
     width: "90%",

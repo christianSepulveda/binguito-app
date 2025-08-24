@@ -1,25 +1,25 @@
 import { DarkTheme, DefaultTheme, Theme } from "@react-navigation/native";
 
-export const appLightTheme: Theme = {
-  ...DefaultTheme,
-  colors: {
-    ...DefaultTheme.colors,
-    background: "#0f1222",
-    card: "#161a31",
-    text: "#F4F6FF",
-    primary: "#7C83FD",
-    border: "#202542",
-  },
+export const loveDaggerPalette = {
+  primary: "#ff0a73",
+  primarySoft: "#ff5aa2",
+  primaryDark: "#d1005a",
+  bgDark: "#0f0d12",
+  cardDark: "#17141d",
+  borderDark: "#2a2730",
+  textDark: "#FDF2F7",
+  overlay: "rgba(0, 0, 0, 0.53)",
 };
 
 export const appDarkTheme: Theme = {
   ...DarkTheme,
   colors: {
     ...DarkTheme.colors,
-    background: "#0b0e1a",
-    card: "#13162b",
-    text: "#E6E9F8",
-    primary: "#9AA0FF",
-    border: "#202542",
+    primary: loveDaggerPalette.primary,
+    background: loveDaggerPalette.bgDark,
+    card: loveDaggerPalette.cardDark,
+    text: loveDaggerPalette.textDark,
+    border: loveDaggerPalette.borderDark,
+    notification: loveDaggerPalette.primary,
   },
 };

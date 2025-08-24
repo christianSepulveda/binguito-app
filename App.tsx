@@ -14,7 +14,7 @@ import {
   Poppins_500Medium,
   Poppins_700Bold,
 } from "@expo-google-fonts/poppins";
-import { appDarkTheme, appLightTheme } from "./src/styles/themes";
+import { appDarkTheme } from "./src/styles/themes";
 
 import RootStack from "./routes/root-stack";
 
@@ -40,11 +40,9 @@ export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
-        <NavigationContainer
-          theme={scheme === "dark" ? appDarkTheme : appLightTheme}
-        >
-          <StatusBar style={scheme === "dark" ? "light" : "light"} />
-          <RootStack scheme={scheme} />
+        <NavigationContainer theme={appDarkTheme}>
+          <StatusBar style={"light"} />
+          <RootStack />
         </NavigationContainer>
       </SafeAreaProvider>
     </GestureHandlerRootView>

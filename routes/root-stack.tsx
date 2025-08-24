@@ -3,11 +3,9 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import { Ionicons } from "@expo/vector-icons";
 import { styles } from "./root-stack-styles";
-import { appDarkTheme, appLightTheme } from "../src/styles/themes";
+import { appDarkTheme } from "../src/styles/themes";
 
 import BingoContainer from "../src/containers/bingo-container";
-
-type Props = { scheme: ColorSchemeName };
 
 export type RootStackParamList = {
   Bingo: undefined;
@@ -15,8 +13,8 @@ export type RootStackParamList = {
 
 const Stack = createStackNavigator<RootStackParamList>();
 
-const RootStack = ({ scheme }: Props) => {
-  const theme = scheme === "dark" ? appDarkTheme : appLightTheme;
+const RootStack = () => {
+  const theme = appDarkTheme;
 
   const headerLeft = () => (
     <Ionicons
