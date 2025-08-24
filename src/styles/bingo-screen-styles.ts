@@ -18,22 +18,6 @@ export const styles = StyleSheet.create({
     paddingVertical: 10,
     marginBottom: "15%",
   },
-
-  overlay: {
-    ...StyleSheet.absoluteFillObject,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  startCard: {
-    width: "90%",
-    height: "33%",
-    borderRadius: 18,
-    borderWidth: 1,
-    padding: 16,
-    gap: 10,
-    alignItems: "center",
-    marginBottom: "40%",
-  },
   title: { fontFamily: "Poppins_700Bold", fontSize: 24 },
   subtitle: {
     fontFamily: "Poppins_400Regular",

@@ -15,6 +15,7 @@ const BingoContainer = () => {
   const [started, setStarted] = useState(false);
   const [completed, setCompleted] = useState(false);
   const [grid, setGrid] = useState<Grid>(() => buildGrid());
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const startGame = useCallback(() => {
     const fresh = buildGrid();
@@ -54,6 +55,7 @@ const BingoContainer = () => {
     if (started && !completed) return;
     setGrid(buildGrid());
     setCompleted(false);
+    setShowConfirmation(false);
     setStarted(false); // vuelve a requerir "Iniciar"
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium).catch(() => {});
   }, [started, completed]);
@@ -67,6 +69,8 @@ const BingoContainer = () => {
       grid={grid}
       started={started}
       canReshuffle={canReshuffle}
+      showConfirmation={showConfirmation}
+      setShowConfirmation={setShowConfirmation}
       onStart={startGame}
       onToggleCell={toggleCell}
       onReshuffle={reshuffle}

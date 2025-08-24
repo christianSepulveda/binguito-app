@@ -40,7 +40,7 @@ const RoundButton = ({
         <Text
           style={[
             styles.label,
-            { color: isPrimary ? "#0b0e1a" : colors.text },
+            { color: colors.text },
             isPrimary && { fontWeight: "700" },
           ]}
         >
