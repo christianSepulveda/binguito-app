@@ -1,5 +1,12 @@
 import React, { useRef } from "react";
-import { Pressable, Text, View, StyleSheet, Animated } from "react-native";
+import {
+  Pressable,
+  Text,
+  View,
+  StyleSheet,
+  Animated,
+  Image,
+} from "react-native";
 import { useTheme } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 import { styles } from "../styles/bingo-cell-styles";
@@ -46,16 +53,25 @@ const BingoCell = ({ number, selected, isFree, disabled, onPress }: Props) => {
           selected && { borderColor: colors.primary, borderWidth: 2 },
         ]}
       >
-        <Text
-          style={[
-            styles.number,
-            { color: colors.text },
-            isFree && { fontSize: 16, opacity: 0.8 },
-            selected && { color: colors.primary },
-          ]}
-        >
-          {isFree ? "" : number}
-        </Text>
+        {isFree ? (
+          <Image
+            source={require("../../assets/logo-white.png")}
+            resizeMode="contain"
+            style={{ width: "80%", height: "80%" }}
+          />
+        ) : (
+          <Text
+            style={[
+              styles.number,
+              { color: colors.text },
+              isFree && { fontSize: 16, opacity: 0.8 },
+              selected && { color: colors.primary },
+            ]}
+          >
+            {" "}
+            {number}
+          </Text>
+        )}
 
         {selected && (
           <View style={styles.check}>
